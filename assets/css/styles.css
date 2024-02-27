@@ -169,3 +169,38 @@ hr {
   letter-spacing: 1.08px;
   text-align: center;
 }
+
+/*--------------------------------------------------------------
+# Camping and Day Use
+--------------------------------------------------------------*/
+
+.day-use {
+    display: flex;
+    justify-content: center;
+}
+
+.day-use-subtitle {
+    display: flex;
+    padding-top: 79px;
+    font-family: Heebo-Regular_;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    color: #063514;
+}
+
+.day-use-title {
+    display: flex;
+    font-family: Heebo-Regular_;
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #063514;
+}
