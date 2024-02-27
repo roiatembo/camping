@@ -1,0 +1,79 @@
+/**
+* Author: Roia Langa Tembo
+**/
+
+/*--------------------------------------------------------------
+# Variable Declarations
+--------------------------------------------------------------*/
+
+:root {
+  --scarborough-black: #128b57;
+  --white: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Heebo-Regular", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.top-bar {
+  height: 35px;
+  padding: 10px 60px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: var(--scarborough-black);
+
+  ul li {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.top-bar-left {
+  display: flex;
+}
+
+.top-bar-right {
+  display: flex;
+}
+
+.top-bar-item {
+  display: inline;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: var(--white);
+}
