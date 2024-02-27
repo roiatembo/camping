@@ -77,3 +77,51 @@ h6 {
   letter-spacing: 1px;
   color: var(--white);
 }
+
+.hero-section {
+  height: 800px;
+  width: 100%;
+  margin: 0 0 79px;
+  object-fit: contain;
+  background-image: url("/assets/img/camping.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 28px 60px 0;
+}
+
+.navbar-item {
+  display: inline;
+  margin: 0 23px 0 0;
+  font-family: Heebo-Regular_;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-align: center;
+  color: var(--white);
+}
+
+  .line-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+  }
+
+  hr {
+    display: inline;
+    width: 535px;
+    display: flex;
+    height: 1px;
+    margin: 21px 28px 0 0;
+    border: none;
+    background-color: var(--white);
+  }
