@@ -109,19 +109,63 @@ h6 {
   color: var(--white);
 }
 
-  .line-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 60px;
-  }
+.line-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  margin-bottom: 173px;
+}
 
-  hr {
-    display: inline;
-    width: 535px;
-    display: flex;
-    height: 1px;
-    margin: 21px 28px 0 0;
-    border: none;
-    background-color: var(--white);
-  }
+hr {
+  display: inline;
+  width: 535px;
+  display: flex;
+  height: 1px;
+  margin: 21px 28px 0 0;
+  border: none;
+  background-color: var(--white);
+}
+
+.subheading {
+  margin-left: 225px;
+  margin-top: 9px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  color: var(--white);
+}
+
+.title-text {
+  width: 796px;
+  margin-left: 220px;
+  font-family: mr_alex;
+  font-size: 90px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: var(--white);
+}
+.hero-button {
+  margin-left: 227px;
+  margin-top: 9px;
+  font-family: Heebo-Regular;
+  border-radius: 22.5px;
+  background-color: transparent;
+  color: var(--white);
+  border: solid 1px;
+  padding: 14px 88px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-align: center;
+}
