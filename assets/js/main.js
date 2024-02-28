@@ -1,2 +1,2 @@
-var splide = new Splide( '.splide' );
+var splide = new Splide(".splide");
 splide.mount();

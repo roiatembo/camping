@@ -3,6 +3,42 @@
 **/
 
 /*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: mr_alex;
+  src: local(mr_alexbold),
+    url(/assets/fonts/mr_alexbold.woff2) format("woff2"),
+    url(/assets/fonts/mr_alexbold.woff) format("woff"),
+    url(/assets/fonts/mr_alexbold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Heebo;
+  src: local(Heebo-Regular),
+    url(/assets/fonts/Heebo-Regular.woff2) format("woff2"),
+    url(/assets/fonts/Heebo-Regular.woff) format("woff"),
+    url(/assets/fonts/Heebo-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: Heebo-Regular;
+ src: local(Heebo-Regular),
+    url(/assets/fonts/Heebo-Regular.woff2) format("woff2"),
+    url(/assets/fonts/Heebo-Regular.woff) format("woff"),
+    url(/assets/fonts/Heebo-Regular.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/*--------------------------------------------------------------
 # Variable Declarations
 --------------------------------------------------------------*/
 
@@ -50,7 +86,7 @@ h6 {
 --------------------------------------------------------------*/
 
 .heading-style {
-  font-family: Heebo-Regular_;
+  font-family: Heebo-Regular;
   margin: 0;
   padding: 0;
   font-size: 50px;
@@ -130,9 +166,10 @@ h6 {
 }
 
 .navbar-item {
-  display: inline;
+  display: inline-flex;
+  align-items: center;
   margin: 0 23px 0 0;
-  font-family: Heebo-Regular_;
+  font-family: Heebo-Regular;
   font-size: 13px;
   font-weight: bold;
   font-stretch: normal;
@@ -143,6 +180,29 @@ h6 {
   color: var(--white);
 }
 
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.submenu li {
+  display: block;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #ddd;
+}
+
 .line-section {
   display: flex;
   justify-content: space-between;
@@ -151,9 +211,9 @@ h6 {
   margin-bottom: 173px;
 }
 
-hr {
+.navbar-line {
   display: inline;
-  width: 535px;
+  width: 500px;
   display: flex;
   height: 1px;
   margin: 21px 28px 0 0;
@@ -175,9 +235,8 @@ hr {
 }
 
 .title-text {
-  width: 796px;
-  margin-left: 220px;
-  margin-bottom: 36px;
+  width: 750px;
+  margin: 9px 0px 36px 220px;
   font-family: mr_alex;
   font-size: 90px;
   font-weight: bold;
@@ -249,13 +308,12 @@ hr {
 
 .icon-set {
   padding-top: 54px;
+  display: flex;
+  gap: 99px;
+}
 
-  img {
-    margin-right: 200px;
-    &:last-child {
-      margin-right: 0px;
-    }
-  }
+.icon-item {
+  flex: 1;
 }
 
 .day-use-button {
@@ -320,6 +378,7 @@ hr {
 }
 
 .explore-button {
+  font-family: Heebo-Regular;
   margin-top: 51px;
   margin-bottom: 59px;
   padding: 12px 45px;
@@ -391,7 +450,8 @@ hr {
 
 .find-your-next-card {
   background-color: var(--white);
-  padding: 4.188rem 4.688rem 2.75rem 3.75rem;
+  padding: 4.188rem 2.814rem 2.75rem 3.75rem;
+  /* padding: 4.188rem 4.688rem 29rem 3.688rem; */
 }
 
 .find-your-next-subtitle {
@@ -416,18 +476,13 @@ hr {
 
 .shop-items {
   display: flex;
-  width: 100%;
-  margin: 0;
-  padding: 0;
   gap: 1.25rem;
   height: 25rem;
   text-align: center;
 }
 
 .shop-items-card {
-  flex: 1;
-  padding: 9.813rem 8.875rem 9.313rem 8.938rem;
-  box-sizing: border-box; 
+  padding: 9.813rem 8.24rem 9.313rem
 }
 
 .shop-items-title {
@@ -454,7 +509,8 @@ hr {
 
 .footer-columns {
   display: flex;
-  margin: 0 27.813rem;
+  /* margin: 0 27.813rem; */
+  margin: 0 10rem 0 25rem;
 }
 
 .footer-column-item {
@@ -484,9 +540,8 @@ hr {
 }
 
 .footer-discount-section {
-  margin: 1.75rem 25.501rem 3.5rem 28.501rem;
+  margin: 1.75rem 10rem 3.5rem 25.5rem;
   padding-bottom: 2.813rem;
-  border-bottom: solid 1px var(--white);
 }
 
 .discount-title {
@@ -502,7 +557,8 @@ hr {
 
 .email-input {
   margin-top: 0.875rem;
-  padding: 0.75rem 15.25rem 0.688rem 1.188rem;
+  margin-right: 1rem;
+  padding: 0.75rem 8rem 0.688rem 1.188rem;
   border: solid 1px var(--white);
   background-color: var(--white);
   font-family: Heebo;
@@ -529,6 +585,16 @@ hr {
   text-align: center;
   color: var(--white);
   background-color: var(--scarborough-black);
+}
+
+.discount-line {
+  display: inline;
+  width: 535px;
+  display: flex;
+  height: 1px;
+  margin: 45px 28px 0 0;
+  border: none;
+  background-color: var(--white);
 }
 
 .all-materials-2021 {

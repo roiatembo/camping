@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
@@ -51,23 +55,39 @@
       <div class="hero-section">
         <nav id="navbar" class="navbar">
           <ul>
-            <li class="navbar-item"><a href="#">CAMPING & LOADING</a></li>
+            <li class="navbar-item">
+              <a href="#">CAMPING & LODGING</a>
+              <i class="bx bx-chevron-down bx-sm"></i>
+              <ul class="submenu">
+                <li><a href="#">CAMPING</a></li>
+                <li><a href="#">LODGING</a></li>
+                <li><a href="#">ENTERTAINMENT</a></li>
+              </ul>
+            </li>
             <li class="navbar-item"><a href="#">EXPLORE</a></li>
-            <li class="navbar-item"><a href="#">TICKETS</a></li>
-            <li class="navbar-item"><a href="#">DESTINATIONS</a></li>
-            <li class="navbar-item"><i>search</i></li>
+            <li class="navbar-item">
+              <a href="#">TICKETS</a>
+              <i class="bx bx-chevron-down bx-sm"></i>
+              <ul class="submenu">
+                <li><a href="#">DISCOUNT TICKETS</a></li>
+                <li><a href="#">UPCOMING TICKETS</a></li>
+                <li><a href="#">FAMILY TICKETS</a></li>
+              </ul>
+            </li>
+            <li class="navbar-item"><a href="#">DESTINATIONS</a>
+            <i style="padding-left: 20px;" class='bx bx-search bx-sm' ></i></li>
           </ul>
         </nav>
         <div class="line-section">
-          <hr />
-          <hr />
+          <hr class="navbar-line"/>
+          <hr class="navbar-line"/>
         </div>
 
         <div class="subheading">Lorem | Epsum | Dolor | Camping | Forest</div>
         <div class="title-text">
           squamish valley on the edge of British Columbia
         </div>
-        <div><button class="hero-button">Shop All</button></div>
+        <div><button class="hero-button">SHOP ALL</button></div>
       </div>
     </header>
     <!-- ======= End of Header Section ======= -->
@@ -86,8 +106,10 @@
           <img src="/assets/img/stream.png" class="icon-item" />
           <img src="/assets/img/more_wood.png" class="icon-item" />
           <img src="/assets/img/emblem.png" class="icon-item" />
+          <img src="/assets/img/barbeque.png" class="icon-item" />
+          <img src="/assets/img/smors.png" class="icon-item" />
         </div>
-        <button class="day-use-button">Shop All</button>
+        <button class="day-use-button">SHOP ALL</button>
       </section>
       <!-- ======= End of Camping and Day use ======= -->
 
@@ -266,12 +288,17 @@
         <div class="footer-discount-section">
           <h2 class="discount-title">SIGN UP AND GET 20% OFF</h2>
           <form>
-            <input type="email" placeholder="Email Address" class="email-input" />
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="email-input"
+            />
             <button type="submit" class="submit-button">SUBMIT</button>
           </form>
+          <hr class="discount-line" />
         </div>
 
-        <div style="opacity: 0.27;">
+        <div style="opacity: 0.27">
           <div class="icon-set">
             <img src="/assets/img/tent.png" />
             <img src="/assets/img/tent_cutout.png" class="icon-item" />
@@ -279,13 +306,15 @@
             <img src="/assets/img/stream.png" class="icon-item" />
             <img src="/assets/img/more_wood.png" class="icon-item" />
             <img src="/assets/img/emblem.png" class="icon-item" />
+            <img src="/assets/img/barbeque.png" class="icon-item" />
+            <img src="/assets/img/smors.png" class="icon-item" />
           </div>
         </div>
 
-        <div style="margin-top: 2rem; text-align: center;">
-        <span class="all-materials-2021">
-          All Materials ©2021 Camping Zion
-        </span>
+        <div style="margin-top: 2rem; text-align: center">
+          <span class="all-materials-2021">
+            All Materials ©2021 Camping Zion
+          </span>
         </div>
       </footer>
     </div>
