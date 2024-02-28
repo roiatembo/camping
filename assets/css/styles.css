@@ -9,6 +9,7 @@
 :root {
   --scarborough-black: #128b57;
   --white: #ffffff;
+  --primary: #063514;
 }
 
 /*--------------------------------------------------------------
@@ -35,6 +36,8 @@ h4,
 h5,
 h6 {
   font-family: "Heebo-Regular", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -175,32 +178,59 @@ hr {
 --------------------------------------------------------------*/
 
 .day-use {
-    display: flex;
-    justify-content: center;
+  text-align: center;
 }
 
 .day-use-subtitle {
-    display: flex;
-    padding-top: 79px;
-    font-family: Heebo-Regular_;
-    font-size: 13px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 1.08px;
-    color: #063514;
+  padding-top: 79px;
+  font-family: Heebo-Regular_;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  color: var(--primary);
 }
 
 .day-use-title {
-    display: flex;
-    font-family: Heebo-Regular_;
-    font-size: 50px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: normal;
-    text-align: center;
-    color: #063514;
+  font-family: Heebo-Regular_;
+  padding-top: 8px;
+  font-size: 50px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--primary);
+}
+
+.icon-set {
+  padding-top: 54px;
+
+  /* img {
+    margin-right: 99px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  } */
+}
+
+.day-use-button {
+  margin-top: 39px;
+  font-family: Heebo-Regular;
+  border-radius: 22.5px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: solid 1px;
+  padding: 14px 88px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-align: center;
 }
