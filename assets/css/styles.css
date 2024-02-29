@@ -107,6 +107,17 @@ h6 {
   letter-spacing: 1.08px;
 }
 
+.content-button {
+  font-family: Heebo-Regular;
+  margin-top: 51px;
+  margin-bottom: 59px;
+  padding: 12px 45px;
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  border-bottom: solid 1.5px var(--white);
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -351,17 +362,6 @@ h6 {
   color: var(--white);
 }
 
-.explore-button {
-  font-family: Heebo-Regular;
-  margin-top: 51px;
-  margin-bottom: 59px;
-  padding: 12px 45px;
-  background-color: transparent;
-  color: var(--white);
-  border: none;
-  border-bottom: solid 1.5px var(--white);
-}
-
 /*--------------------------------------------------------------
 # Tours and Tickets Section
 --------------------------------------------------------------*/
@@ -402,14 +402,6 @@ h6 {
   line-height: 1.22;
   letter-spacing: normal;
   padding-top: 1.25rem;
-}
-
-.tours-button {
-  color: var(--white);
-  background-color: transparent;
-  padding: 12px 45px;
-  border: none;
-  border-bottom: solid 1.5px var(--white);
 }
 
 .tent-inside-img {
@@ -474,15 +466,6 @@ h6 {
   color: var(--white);
   font-family: Heebo-Regular;
   font-size: 2.5rem;
-}
-
-.shop-items-button {
-  color: var(--white);
-  margin-top: 1.375rem;
-  background-color: transparent;
-  padding: 12px 45px;
-  border: none;
-  border-bottom: solid 1.5px var(--white);
 }
 
 /*--------------------------------------------------------------
