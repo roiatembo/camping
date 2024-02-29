@@ -53,6 +53,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0px;
+  width: 100vw;
+  overflow: hidden;
 }
 
 a {
@@ -501,13 +503,11 @@ h6 {
 .footer {
   background-color: var(--primary);
   margin-top: 1.25rem;
-  height: 44.813rem;
   padding: 5.063rem 3.25rem 4.375rem 1.5rem;
 }
 
 .footer-columns {
   display: flex;
-  /* margin: 0 27.813rem; */
   margin: 0 10rem 0 25rem;
 }
 
@@ -623,8 +623,6 @@ h6 {
 }
 
 @media (max-width: 440px) {
-
-
   .top-bar-right {
     display: none;
   }
@@ -699,8 +697,6 @@ h6 {
     margin: 132px 10px 220px 10px;
   }
 
-
-
   .find-your-next-subtitle {
     margin-left: 30px;
   }
@@ -711,7 +707,7 @@ h6 {
   }
 
   .shop-items {
-    display: block;
+    display: contents;
     z-index: 500;
   }
 
@@ -722,7 +718,69 @@ h6 {
   }
 
   .footer {
+    margin-top: 20px;
+    padding: 0;
+    padding-bottom: 37px;
+  }
+
+  .footer-columns {
+    display: none;
+  }
+
+  .footer-discount-section {
     margin: 0;
     padding: 0;
+    padding-top: 41px;
+  }
+
+  .discount-title {
+    font-size: 20px;
+    padding: 0 30px 0 50px;
+  }
+
+  .email-input {
+    border-radius: 0;
+    margin: 19px 30px 19px 50px;
+    padding: 14px 60px;
+  }
+
+  .submit-button {
+    padding: 14px 121px;
+    margin: 0 30px 0 50px;
+  }
+
+  .discount-line {
+    display: block;
+    color: red;
+    background-color: #e4cb45;
+    width: 100%;
+    margin: 0;
+    margin: 80px 0px 0 28px;
+  }
+
+  .mobile-footer-nav {
+    margin: 0 28px;
+  }
+
+  .accordion {
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: solid 1px var(--white);
+    outline: none;
+    transition: 0.4s;
+  }
+
+ 
+  .panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
 }

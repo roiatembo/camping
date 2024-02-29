@@ -28,4 +28,24 @@ if (viewportWidth < 440) {
   $(".find-your-next-paragraph").text(
     "We're here to help you dream up your next trip, figure out the details, and reserve experiences at over 4,200 facilities and 113,000 individual sites across the country. There's something for everyone on Recreation.gov, so get out there, experience the USA, and bring home a story!"
   );
+
+  $(".discount-title").text("STAY UP-TO-DATE ON NEW ARRIVALS & NEW DEALS.");
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
 }
