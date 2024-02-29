@@ -184,6 +184,10 @@ h6 {
   color: var(--white);
 }
 
+nav a:hover {
+  color: var(--scarborough-black);
+}
+
 .submenu {
   display: none;
   position: absolute;
@@ -206,6 +210,34 @@ h6 {
 .submenu li a:hover {
   background-color: #ddd;
 }
+
+.menu-toggle {
+  display: none;
+}
+
+ .mobile-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 30vh;
+  width: 250px;
+  z-index: 2000;
+  background-color: var(--scarborough-black);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+ }
+
+ .mobile-navbar li {
+  width: 100%;
+ }
+
+ .mobile-navbar a{
+  width: 100%;
+ }
 
 .line-section {
   display: flex;
@@ -610,8 +642,6 @@ h6 {
   .footer-discount-section {
     margin: 28px 510px;
   }
-
- 
 }
 
 /* Mobile Screens (>1440px) */
@@ -625,12 +655,12 @@ h6 {
     text-align: left;
   }
 
-  .navbar {
-    display: none;
+  .menu-toggle {
+    display: block;
   }
 
   .navbar-line {
-    visibility: hidden;
+    display: none;
   }
 
   .subheading {
@@ -768,7 +798,6 @@ h6 {
     transition: 0.4s;
   }
 
- 
   .panel {
     padding: 0 18px;
     background-color: transparent;

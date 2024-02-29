@@ -8,6 +8,8 @@ if (viewportWidth < 440) {
     "BOOK TICKETS NOW <a href='' style='text-decoration: underline'>LEARN MORE</a>"
   );
 
+  $("#navbar").removeClass("navbar").addClass("mobile-navbar");
+
   $(".title-text").text("SQUAMISH VALLEY ON THE EDGE");
 
   $(".explore-section").prepend(
@@ -54,4 +56,9 @@ if (viewportWidth < 440) {
   <li class='top-bar-item'>SIGN UP</li>
   <li class='top-bar-item'>LOGIN</li>
 </ul>`);
+}
+
+function showMobileNav() {
+  $(".mobile-navbar").css("display", "flex");
+  window.alert("dont doubt stupid");
 }
