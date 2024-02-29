@@ -53,8 +53,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0px;
-  width: 100vw;
-  overflow: hidden;
 }
 
 a {
@@ -309,6 +307,7 @@ h6 {
 
 .icon-set {
   padding-top: 54px;
+  overflow: hidden;
   display: flex;
   gap: 99px;
 }
@@ -436,8 +435,8 @@ h6 {
 }
 
 .tent-inside-img {
-  flex: 1;
-  width: 50rem;
+  max-width: 100%;
+  overflow: hidden;
   z-index: 3;
 }
 
@@ -618,9 +617,25 @@ h6 {
   .icon-set {
     padding-top: 54px;
     display: flex;
-    gap: 132px;
+    gap: 160px;
   }
+
+  .shop-items-card {
+    padding: 157px 200px;
+  }
+
+  .footer-columns {
+    margin: 0 500px;
+  }
+
+  .footer-discount-section {
+    margin: 28px 510px;
+  }
+
+ 
 }
+
+/* Mobile Screens (>1440px) */
 
 @media (max-width: 440px) {
   .top-bar-right {
@@ -751,11 +766,10 @@ h6 {
 
   .discount-line {
     display: block;
-    color: red;
-    background-color: #e4cb45;
-    width: 100%;
+    width: 80%;
     margin: 0;
     margin: 80px 0px 0 28px;
+    padding-right: 28px;
   }
 
   .mobile-footer-nav {

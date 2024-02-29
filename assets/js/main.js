@@ -31,8 +31,7 @@ if (viewportWidth < 440) {
 
   $(".discount-title").text("STAY UP-TO-DATE ON NEW ARRIVALS & NEW DEALS.");
 
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+  $(".mobile-footer-nav").css("display", "block");
 
   var acc = document.getElementsByClassName("accordion");
   var i;
@@ -48,4 +47,11 @@ if (viewportWidth < 440) {
       }
     });
   }
+} else if (viewportWidth > 1440) {
+  $(".top-bar-left").html("<span class='top-bar-item'>BOOK TICKET NOW</span>");
+  $(".top-bar-right").html(`<ul>
+  <li class='top-bar-item'>HELP</li>
+  <li class='top-bar-item'>SIGN UP</li>
+  <li class='top-bar-item'>LOGIN</li>
+</ul>`);
 }
