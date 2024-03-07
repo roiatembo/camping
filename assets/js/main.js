@@ -1,6 +1,7 @@
 var splide = new Splide(".splide");
 splide.mount();
 
+
 var viewportWidth = window.innerWidth;
 
 if (viewportWidth < 440) {

@@ -215,7 +215,7 @@ nav a:hover {
   display: none;
 }
 
- .mobile-navbar {
+.mobile-navbar {
   position: fixed;
   top: 0;
   right: 0;
@@ -229,15 +229,15 @@ nav a:hover {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
- }
+}
 
- .mobile-navbar li {
+.mobile-navbar li {
   width: 100%;
- }
+}
 
- .mobile-navbar a{
+.mobile-navbar a {
   width: 100%;
- }
+}
 
 .line-section {
   display: flex;
@@ -405,6 +405,7 @@ nav a:hover {
 
 .splide {
   flex: 1;
+  /* margin: 40px 116px 64px; */
   margin-top: 2.5rem;
   margin-bottom: 4rem;
   margin-right: -7.25rem;
@@ -621,30 +622,81 @@ nav a:hover {
 
 /* Extra Wide Screen (>1440px) */
 @media (min-width: 1441px) {
+  .top-bar {
+    padding: 10px 240px;
+  }
+
   .navbar-line {
     width: 600px;
+  }
+
+  .line-section {
+    padding: 0 240px;
+  }
+
+  .subheading {
+    margin-left: 400px;
+  }
+
+  .title-text {
+    margin-left: 400px;
+  }
+
+  .hero-button {
+    margin-left: 400px;
+  }
+
+  .day-use {
+    padding: 10px 240px;
   }
 
   .icon-set {
     padding-top: 54px;
     display: flex;
-    gap: 160px;
+    gap: 113px;
+  }
+
+  .explore-section {
+    margin: 125px 240px 0px;
+  }
+
+  .splide {
+    padding: 80px 251px;
+  }
+
+  .find-your-next {
+    margin: 75px 240px 0;
+  }
+
+  .shop-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
   }
 
   .shop-items-card {
-    padding: 157px 200px;
+    padding: 157px 230px;
   }
 
   .footer-columns {
-    margin: 0 500px;
+    margin: 0 690px;
+  }
+
+  .footer-column-title {
+    padding-right: 9px;
   }
 
   .footer-discount-section {
-    margin: 28px 510px;
+    margin: 28px 510px 56px 690px;
+  }
+
+  .bottom-icons {
+    padding-left: 240px;
+    padding-right: 240px;
   }
 }
 
-/* Mobile Screens (>1440px) */
+/* Mobile Screens (>440px) */
 
 @media (max-width: 440px) {
   .top-bar-right {
