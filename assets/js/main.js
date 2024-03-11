@@ -1,65 +1,64 @@
 var splide = new Splide(".splide");
 splide.mount();
 
+$(document).ready(function () {
+  function responsive() {
+    var viewportWidth = window.innerWidth;
 
-var viewportWidth = window.innerWidth;
+    if (viewportWidth < 1000) {
+      $("#search-icon").removeClass("bx-search");
+      $(".top-bar-item").html(
+        "BOOK TICKETS NOW <a href='' style='text-decoration: underline'>LEARN MORE</a>"
+      );
 
-if (viewportWidth < 440) {
-  $(".top-bar-item").html(
-    "BOOK TICKETS NOW <a href='' style='text-decoration: underline'>LEARN MORE</a>"
-  );
+      $(".title-text").text("SQUAMISH VALLEY ON THE EDGE");
 
-  $("#navbar").removeClass("navbar").addClass("mobile-navbar");
+      $(".explore-section").prepend("<img src='/assets/img/background.png'>");
 
-  $(".title-text").text("SQUAMISH VALLEY ON THE EDGE");
+      $(".explore-title").text("DESTINATIONS");
 
-  $(".explore-section").prepend(
-    "<img width='100%' height='255px' src='/assets/img/background.png'>"
-  );
+      $(".tours-and-tickets").prepend(
+        "<img class='mobile-image' src='/assets/img/inside_tent.png' />"
+      );
 
-  $(".explore-title").text("DESTINATIONS");
+      var lastFindYourNextCard = $(".find-your-next-card")[1];
+      lastFindYourNextCard.style.display = "none";
 
-  $(".tours-and-tickets").prepend(
-    "<img class='mobile-image' src='/assets/img/inside_tent.png' />"
-  );
+      $(".find-your-next-title").text("FIND YOUR NEXT ADVENTURE");
 
-  var lastFindYourNextCard = $(".find-your-next-card")[1];
-  lastFindYourNextCard.style.display = "none";
+      $(".find-your-next-paragraph").text(
+        "We're here to help you dream up your next trip, figure out the details, and reserve experiences at over 4,200 facilities and 113,000 individual sites across the country. There's something for everyone on Recreation.gov, so get out there, experience the USA, and bring home a story!"
+      );
 
-  $(".find-your-next-title").text("FIND YOUR NEXT ADVENTURE");
+      $(".discount-title").text("STAY UP-TO-DATE ON NEW ARRIVALS & NEW DEALS.");
 
-  $(".find-your-next-paragraph").text(
-    "We're here to help you dream up your next trip, figure out the details, and reserve experiences at over 4,200 facilities and 113,000 individual sites across the country. There's something for everyone on Recreation.gov, so get out there, experience the USA, and bring home a story!"
-  );
+      $(".mobile-footer-nav").css("display", "block");
 
-  $(".discount-title").text("STAY UP-TO-DATE ON NEW ARRIVALS & NEW DEALS.");
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
-  $(".mobile-footer-nav").css("display", "block");
-
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
       }
-    });
-  }
-} else if (viewportWidth > 1440) {
-  $(".top-bar-left").html("<span class='top-bar-item'>BOOK TICKET NOW</span>");
-  $(".top-bar-right").html(`<ul>
+    } else if (viewportWidth > 1440) {
+      $(".top-bar-left").html(
+        "<span class='top-bar-item'>BOOK TICKET NOW</span>"
+      );
+      $(".top-bar-right").html(`<ul>
   <li class='top-bar-item'>HELP</li>
   <li class='top-bar-item'>SIGN UP</li>
   <li class='top-bar-item'>LOGIN</li>
 </ul>`);
-}
+    }
+  }
 
-function showMobileNav() {
-  $(".mobile-navbar").css("display", "flex");
-  window.alert("dont doubt stupid");
-}
+  responsive();
+});

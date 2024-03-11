@@ -13,6 +13,18 @@
       name="keywords"
       content="camping, lodging, nature, outdoors, adventure, cabins, tents, vacation, wilderness, family-friendly, amenities, reservations, explore"
     />
+    <script>
+      function showMobileNav() {
+        var mobileNav = $(".navbar").css("display");
+        if (mobileNav === "none") {
+          $(".navbar").css("display", "flex");
+          $("#menu-icon").removeClass("bx-menu").addClass("bx-x");
+        } else {
+          $(".navbar").css("display", "none");
+          $("#menu-icon").removeClass("bx-x").addClass("bx-menu");
+        }
+      }
+    </script>
 
     <title>Camping Website</title>
 
@@ -38,6 +50,7 @@
 
     <!-- Main CSS -->
     <link href="assets/css/styles.css" rel="stylesheet" />
+    <script type="module" src="/assets/js/main.js"></script>
   </head>
 
   <body>
@@ -61,11 +74,12 @@
 
       <div class="hero-section">
         <nav id="navbar" class="navbar">
-          <ul>
+          <ul class="mobile-nav">
             <li class="navbar-item text-style">
-              <a href="#">CAMPING & LODGING</a>
-              <i class="bx bx-chevron-down bx-sm"></i>
-              <ul class="submenu">
+              <a href="#" class="with-icon"
+                >CAMPING & LODGING <i class="bx bx-chevron-down bx-sm"></i
+              ></a>
+              <ul class="submenu-2">
                 <li><a href="#">CAMPING</a></li>
                 <li><a href="#">LODGING</a></li>
                 <li><a href="#">ENTERTAINMENT</a></li>
@@ -73,9 +87,10 @@
             </li>
             <li class="navbar-item text-style"><a href="#">EXPLORE</a></li>
             <li class="navbar-item text-style">
-              <a href="#">TICKETS</a>
-              <i class="bx bx-chevron-down bx-sm"></i>
-              <ul class="submenu">
+              <a href="#" class="with-icon"
+                >TICKETS <i class="bx bx-chevron-down bx-sm"></i
+              ></a>
+              <ul class="submenu-1">
                 <li><a href="#">DISCOUNT TICKETS</a></li>
                 <li><a href="#">UPCOMING TICKETS</a></li>
                 <li><a href="#">FAMILY TICKETS</a></li>
@@ -83,23 +98,24 @@
             </li>
             <li class="navbar-item text-style">
               <a href="#">DESTINATIONS</a>
-              <i style="padding-left: 20px" class="bx bx-search bx-sm"></i>
+              <i id="search-icon" style="padding-left: 20px" class="bx bx-search bx-sm"></i>
             </li>
           </ul>
         </nav>
         <span onclick="showMobileNav()" class="menu-toggle"
-          ><i class="bx bx-menu bx-lg" style="color: white"></i
+          ><i id="menu-icon" class="bx bx-menu bx-lg" style="color: white"></i
         ></span>
         <div class="line-section">
           <hr class="navbar-line" />
           <hr class="navbar-line" />
         </div>
-
-        <div class="subheading">Lorem | Epsum | Dolor | Camping | Forest</div>
-        <div class="title-text">
-          squamish valley on the edge of British Columbia
+        <div class="mobile-center">
+          <div class="subheading">Lorem | Epsum | Dolor | Camping | Forest</div>
+          <div class="title-text">
+            squamish valley on the edge of British Columbia
+          </div>
+          <div><button class="hero-button text-style">SHOP ALL</button></div>
         </div>
-        <div><button class="hero-button text-style">SHOP ALL</button></div>
       </div>
     </header>
     <!-- ======= End of Header Section ======= -->
@@ -148,17 +164,19 @@
       <!-- ======= Explore Section ======= -->
       <section class="explore-section">
         <div class="discover-new-experiences">
-          <span class="explore-subtitle text-style"
-            >DISCOVER NEW EXPERIENCES</span
-          >
-          <h2 class="explore-title heading-style">
-            EXPLORE DESTINATIONS & ACTIVITIES
-          </h2>
-          <p class="explore-paragraph">
-            Discover new experiences, historic landmarks, and outdoor escapes
-            right down the road or across the country.
-          </p>
-          <button class="content-button text-style">Shop All</button>
+          <div class="discover-content">
+            <span class="explore-subtitle text-style"
+              >DISCOVER NEW EXPERIENCES</span
+            >
+            <h2 class="explore-title heading-style">
+              EXPLORE DESTINATIONS & ACTIVITIES
+            </h2>
+            <p class="explore-paragraph">
+              Discover new experiences, historic landmarks, and outdoor escapes
+              right down the road or across the country.
+            </p>
+            <button class="content-button text-style">Shop All</button>
+          </div>
         </div>
       </section>
       <!-- ======= End of Explore Section ======= -->
@@ -193,7 +211,7 @@
                   113,000 individual sites across the country. There's something
                   for everyone
                 </p>
-                <button class="tours-button text-style">Shop All</button>
+                <button class="content text-style">Shop All</button>
               </li>
 
               <li class="splide__slide">
@@ -207,7 +225,7 @@
                   113,000 individual sites across the country. There's something
                   for everyone
                 </p>
-                <button class="tours-button text-style">Shop All</button>
+                <button class="content-button text-style">Shop All</button>
               </li>
             </ul>
           </div>
@@ -259,7 +277,9 @@
           "
         >
           <h2 class="shop-items-title">CAMPING</h2>
-          <button class="content-button text-style">Shop All</button>
+          <button class="content-button text-style" style="margin: 22px 0px">
+            Shop All
+          </button>
         </div>
 
         <div
@@ -270,7 +290,9 @@
           "
         >
           <h2 class="shop-items-title">LODGING</h2>
-          <button class="content-button text-style">Shop All</button>
+          <button class="content-button text-style" style="margin: 22px 0px">
+            Shop All
+          </button>
         </div>
 
         <div
@@ -281,7 +303,9 @@
           "
         >
           <h2 class="shop-items-title">PERMITS</h2>
-          <button class="content-button text-style">Shop All</button>
+          <button class="content-button text-style" style="margin: 22px 0px">
+            Shop All
+          </button>
         </div>
       </section>
       <!-- ======= End of Shop Items Section ======= -->
@@ -411,7 +435,7 @@
         </div>
       </footer>
     </div>
-    <script type="module" src="/assets/js/main.js"></script>
+ 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   </body>
 </html>

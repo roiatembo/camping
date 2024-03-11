@@ -1,0 +1,871 @@
+/**
+* Author: Roia Langa Tembo
+**/
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: mr_alex;
+  src: local(mr_alexbold), url(/assets/fonts/mr_alexbold.woff2) format("woff2"),
+    url(/assets/fonts/mr_alexbold.woff) format("woff"),
+    url(/assets/fonts/mr_alexbold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Heebo;
+  src: local(Heebo-Regular),
+    url(/assets/fonts/Heebo-Regular.woff2) format("woff2"),
+    url(/assets/fonts/Heebo-Regular.woff) format("woff"),
+    url(/assets/fonts/Heebo-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: Heebo-Regular;
+  src: local(Heebo-Regular),
+    url(/assets/fonts/Heebo-Regular.woff2) format("woff2"),
+    url(/assets/fonts/Heebo-Regular.woff) format("woff"),
+    url(/assets/fonts/Heebo-Regular.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/*--------------------------------------------------------------
+# Variable Declarations
+--------------------------------------------------------------*/
+
+:root {
+  --scarborough-black: #128b57;
+  --white: #ffffff;
+  --primary: #063514;
+  --fluid-top: clamp(3.75rem, -58.125rem + 68.75vi, 24.375rem);
+  --fluid-top-item: clamp(2.5rem, -1.0625rem + 3.9583vi, 3.6875rem);
+  --fluid-225-528: clamp(14.0625rem, -42.75rem + 63.125vi, 33rem);
+  --fluid-9-20: clamp(0.5625rem, -1.5rem + 2.2917vi, 1.25rem);
+  --fluid-73-173: clamp(4.5625rem, -14.1875rem + 20.8333vi, 10.8125rem);
+  --fluid-171-191: clamp(10.6875rem, 6.9375rem + 4.1667vi, 11.9375rem);
+  --fluid-11-12: clamp(0.6875rem, 0.675rem + 0.0625vi, 0.75rem);
+  --fluid-95-234: clamp(5.9375rem, -13.8068rem + 31.5909vi, 14.625rem);
+  --fluid-25-40: clamp(1.5625rem, -0.5682rem + 3.4091vi, 2.5rem);
+  --fluid-0-390: clamp(0rem, -73.125rem + 81.25vi, 24.375rem);
+  --fluid-78-110: clamp(4.875rem, 4.3036rem + 2.8571vi, 6.875rem);
+  --fluid-15-39: clamp(0.9375rem, 0.5089rem + 2.1429vi, 2.4375rem);
+  --fluid-36-160: clamp(2.25rem, -6.1739rem + 13.4783vi, 10rem);
+  --fluid-75-101: clamp(4.6875rem, -0.1875rem + 5.4167vi, 6.3125rem);
+  --fluid-140-206: clamp(8.75rem, -0.625rem + 15vi, 12.875rem);
+  --fluid-9-12: clamp(0.5625rem, 0.525rem + 0.1875vi, 0.75rem);
+  --fluid-50-107: clamp(3.125rem, -4.9716rem + 12.9545vi, 6.6875rem);
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Heebo-Regular", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+.heading-style {
+  font-family: Heebo-Regular;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+}
+
+.text-style {
+  font-family: "Heebo-Regular", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.08px;
+}
+
+.content-button {
+  font-family: Heebo-Regular;
+  margin-top: 51px;
+  margin-bottom: 59px;
+  padding: 12px 45px;
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  border-bottom: solid 1.5px var(--white);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.top-bar {
+  background-color: var(--scarborough-black);
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px var(--fluid-top);
+}
+
+.top-bar-right {
+  ul li {
+    margin-right: var(--fluid-top-item);
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.top-bar-item {
+  display: inline;
+  font-family: Inter;
+  font-size: var(--fluid-9-12);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.hero-section {
+  min-height: 100vh;
+  object-fit: contain;
+  background-image: url("/assets/img/forest.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 28px 60px 0;
+}
+
+.navbar-item {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 23px 0 0;
+  font-family: Heebo-Regular;
+  text-align: center;
+  color: var(--white);
+}
+
+.with-icon {
+  display: flex;
+  align-items: center;
+}
+
+nav a:hover {
+  color: var(--scarborough-black);
+}
+
+.submenu-1 {
+  display: none;
+  padding: 20px 0px;
+  margin-top: 140px;
+}
+
+.submenu-1 li {
+  display: block;
+}
+
+.submenu-1 li a {
+  padding: 0px 25px;
+  color: var(--white);
+  line-height: 25px;
+  font-family: Heebo-Regular;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.submenu-1 li a:hover {
+  color: #e4cb45;
+}
+
+.navbar ul li:hover .submenu-1 {
+  display: block;
+  position: absolute;
+  background-color: var(--scarborough-black);
+}
+
+.submenu-2 {
+  display: none;
+  padding: 20px 0px;
+  margin-top: 140px;
+}
+
+.submenu-2 li {
+  display: block;
+}
+
+.submenu-2 li a {
+  padding: 0px 25px;
+  color: var(--white);
+  line-height: 25px;
+  font-family: Heebo-Regular;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.submenu-2 li a:hover {
+  color: #e4cb45;
+}
+
+.navbar ul li:hover .submenu-2 {
+  display: block;
+  position: absolute;
+  background-color: var(--scarborough-black);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* .mobile-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 30vh;
+  width: 250px;
+  z-index: 2000;
+  background-color: var(--scarborough-black);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.mobile-navbar li {
+  width: 100%;
+}
+
+.mobile-navbar a {
+  width: 100%;
+} */
+
+.line-section {
+  display: flex;
+  gap: 14rem;
+  padding: 0px var(--fluid-top);
+  margin-bottom: var(--fluid-73-173);
+}
+
+.navbar-line {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: var(--white);
+}
+
+.subheading {
+  margin-left: var(--fluid-225-528);
+  align-items: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  color: var(--white);
+}
+
+.title-text {
+  max-width: 750px;
+  margin: var(--fluid-9-20) 0px 0px var(--fluid-225-528);
+  font-family: mr_alex;
+  font-size: 90px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.hero-button {
+  margin-left: var(--fluid-225-528);
+  margin-top: var(--fluid-9-20);
+  font-family: Heebo-Regular;
+  border-radius: 22.5px;
+  background-color: transparent;
+  color: var(--white);
+  border: solid 1px;
+  padding: 14px 88px 12px;
+  text-align: center;
+}
+
+#services {
+  padding-top: 79px;
+  object-fit: contain;
+  background-image: url("/assets/img/service_background.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+# Camping and Day Use
+--------------------------------------------------------------*/
+
+.day-use {
+  text-align: center;
+}
+
+.day-use-subtitle {
+  padding-top: 79px;
+  font-family: Heebo-Regular_;
+  color: var(--primary);
+}
+
+.day-use-title {
+  font-family: Heebo-Regular_;
+  padding-top: 8px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.icon-set {
+  padding: 54px var(--fluid-0-390);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: var(--fluid-78-110);
+}
+
+.day-use-button {
+  margin-top: var(--fluid-15-39);
+  font-family: Heebo-Regular;
+  border-radius: 22.5px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: solid 1px;
+  padding: 14px 88px 12px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Explore Section
+--------------------------------------------------------------*/
+
+.explore-section {
+  margin: 125px var(--fluid-top) 0;
+  min-height: 735px;
+  object-fit: contain;
+  background-image: url("/assets/img/background.png");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.discover-new-experiences {
+  margin: -46px var(--fluid-140-206) 0;
+  padding: 80px var(--fluid-95-234);
+  background-color: rgba(18, 139, 87, 0.8);
+  position: absolute;
+  text-align: center;
+  border-bottom: solid 10px #e4cb45;
+}
+
+.discover-content {
+  max-width: 400px;
+}
+
+.explore-subtitle {
+  padding-top: 80px;
+  color: var(--white);
+}
+
+.explore-title {
+  padding-top: 11px;
+  color: var(--white);
+}
+
+.explore-paragraph {
+  padding-top: 21px;
+  width: 400;
+  font-family: Heebo;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+/*--------------------------------------------------------------
+# Tours and Tickets Section
+--------------------------------------------------------------*/
+
+.tours-and-tickets {
+  margin: 80px var(--fluid-36-160) 0 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.splide {
+  margin: 2.5rem -7.25rem 4rem 0;
+  padding: 5rem 59px;
+  background-color: var(--scarborough-black);
+  border-right: solid 10px #e4cb45;
+  text-align: center;
+  z-index: 4;
+}
+
+.tours-subtitle {
+  color: var(--white);
+}
+
+.tours-title {
+  color: var(--white);
+  padding-top: 0.438rem;
+}
+
+.tours-paragraph {
+  color: var(--white);
+  font-family: Heebo;
+  font-size: 1.125rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  padding-top: 1.25rem;
+}
+
+/*--------------------------------------------------------------
+# Find Your Next Adventure Section
+--------------------------------------------------------------*/
+
+.find-your-next {
+  margin: var(--fluid-75-101) var(--fluid-36-160) 0;
+  display: flex;
+  gap: var(--fluid-171-191);
+}
+
+.find-your-next-card {
+  background-color: var(--white);
+  padding: 4.188rem 2.814rem 2.75rem 3.75rem;
+}
+
+.find-your-next-subtitle {
+  color: var(--primary);
+}
+
+.find-your-next-title {
+  color: var(--primary);
+  padding-top: 0.5rem;
+}
+
+.find-your-next-paragraph {
+  color: var(--primary);
+  font-family: Heebo;
+  font-size: 1.125rem;
+  /* max-width: 28.25rem; */
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  padding-top: 20px;
+}
+
+/*--------------------------------------------------------------
+# Shop Items Section
+--------------------------------------------------------------*/
+
+.shop-items {
+  display: grid;
+  grid-auto-flow: column;
+  text-align: center;
+  column-gap: 20px;
+}
+
+.shop-items-card {
+  padding: var(--fluid-50-107) 0px;
+}
+
+.shop-items-title {
+  color: var(--white);
+  font-family: Heebo-Regular;
+  font-size: var(--fluid-25-40);
+}
+
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+
+.footer {
+  background-color: var(--primary);
+  margin-top: 20px;
+  padding-top: 81px;
+  padding-bottom: 71px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.footer-column-title {
+  max-width: 85px;
+  color: var(--white);
+  font-family: Heebo-Regular;
+  font-size: 0.813rem;
+  letter-spacing: 1.08px;
+}
+
+.footer-column-list {
+  opacity: 0.5;
+  list-style-type: none;
+  font-family: Inter;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5rem;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+/* footer discount section */
+
+.footer-discount-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discount-title {
+  font-family: Heebo-Regular_;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.email-input {
+  margin: 16px;
+  padding: 0.75rem 10px 0.688rem 1.188rem;
+  border: solid 1px var(--white);
+  background-color: var(--white);
+  font-family: Heebo;
+  font-size: 1.125rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  color: #063514;
+}
+
+.submit-button {
+  padding: 0.75rem 2.756rem;
+  font-family: Heebo-Regular_;
+  border-radius: 22.5px;
+  border: none;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--scarborough-black);
+}
+
+.discount-line {
+  width: 385px;
+}
+
+.all-materials-2021 {
+  margin-top: 2rem;
+  opacity: 0.5;
+  font-family: Inter;
+  font-size: 0.625rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white);
+}
+
+/* Mobile Screens (>1000px) */
+
+@media (max-width: 999px) {
+  .top-bar-right {
+    display: none;
+  }
+
+  .navbar {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary);
+    height: 100vh;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+  }
+
+  .navbar-item {
+    font-size: clamp(20px, 5.8616px + 4.4183vi, 50px);
+    line-height: clamp(50px, 26.4359px + 7.3638vi, 100px);
+  }
+
+  .menu-toggle {
+    display: block;
+    padding: 20px 0px 0px 30px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+  }
+
+  .navbar-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submenu-2 {
+    margin: 0;
+  }
+
+  .navbar ul li:hover .submenu-2 {
+    display: block;
+    position: relative;
+    background-color: var(--primary);
+  }
+
+  .submenu-1 {
+    margin: 0;
+  }
+
+  .navbar ul li:hover .submenu-1 {
+    display: block;
+    position: relative;
+    background-color: var(--primary);
+  }
+
+  .navbar-line {
+    display: none;
+  }
+
+  .mobile-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subheading {
+    margin: 0px 20px;
+    text-align: center;
+  }
+
+  .title-text {
+    margin: 10px 50px;
+    text-align: center;
+  }
+
+  .hero-button {
+    margin: 9px 10px;
+  }
+
+  .explore-section {
+    margin: 67px 0 0;
+    background: none;
+  }
+
+  .discover-new-experiences {
+    margin: -4px 0 0;
+    padding: 80px 0;
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discover-content {
+    max-width: none;
+  }
+
+  .explore-title {
+    font-size: 40px;
+  }
+
+  .explore-paragraph {
+    font-size: 18px;
+    padding: 0 18px;
+  }
+
+  .tours-and-tickets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  img.mobile-image {
+    max-width: none;
+    margin-top: clamp(3.4375rem, -2.0117rem + 27.2459vi, 15rem);
+  }
+
+  .splide {
+    margin: 0;
+    margin-top: -200px;
+    padding: 60px 20px;
+    max-width: 100%;
+    border: none;
+    border-bottom: solid 10px #e4cb45;
+  }
+
+  .tent-inside-img {
+    display: none;
+  }
+
+  .find-your-next {
+    margin: 132px 10px 0;
+    display: block;
+  }
+
+  .find-your-next-card {
+    padding: 70px 20px 62px;
+    text-align: center;
+  }
+
+  .find-your-next-title {
+    font-size: 2.5rem;
+  }
+
+  .shop-items {
+    display: block;
+  }
+
+  .shop-items-card {
+    padding: 100px 0;
+    margin-bottom: 30px;
+  }
+
+  .footer {
+    padding: 41px 30px 37px;
+  }
+
+  .footer-columns {
+    display: none;
+  }
+
+  .discount-title {
+    font-size: 18px;
+  }
+
+  .email-input {
+    margin: 16px 0;
+    padding-right: clamp(2.1875rem, -5.9481rem + 40.678vi, 9.6875rem);
+  }
+
+  .submit-button {
+    padding: 14px 102px;
+  }
+
+  .discount-line {
+    display: none;
+  }
+
+  .mobile-footer-nav {
+    margin: 80px 18px;
+
+    button {
+      &:first-child {
+        border-top: solid 1px var(--white);
+      }
+    }
+  }
+
+  .accordion {
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: solid 1px var(--white);
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}
