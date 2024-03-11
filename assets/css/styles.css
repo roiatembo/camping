@@ -53,6 +53,7 @@
   --fluid-171-191: clamp(10.6875rem, 6.9375rem + 4.1667vi, 11.9375rem);
   --fluid-11-12: clamp(0.6875rem, 0.675rem + 0.0625vi, 0.75rem);
   --fluid-95-234: clamp(5.9375rem, -13.8068rem + 31.5909vi, 14.625rem);
+  --fluid-60-90: clamp(3.75rem, 2.8676rem + 4.4118vi, 5.625rem);
   --fluid-25-40: clamp(1.5625rem, -0.5682rem + 3.4091vi, 2.5rem);
   --fluid-0-390: clamp(0rem, -73.125rem + 81.25vi, 24.375rem);
   --fluid-78-110: clamp(4.875rem, 4.3036rem + 2.8571vi, 6.875rem);
@@ -269,30 +270,6 @@ nav a:hover {
   display: none;
 }
 
-/* .mobile-navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 30vh;
-  width: 250px;
-  z-index: 2000;
-  background-color: var(--scarborough-black);
-  backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.mobile-navbar li {
-  width: 100%;
-}
-
-.mobile-navbar a {
-  width: 100%;
-} */
-
 .line-section {
   display: flex;
   gap: 14rem;
@@ -324,7 +301,7 @@ nav a:hover {
   max-width: 750px;
   margin: var(--fluid-9-20) 0px 0px var(--fluid-225-528);
   font-family: mr_alex;
-  font-size: 90px;
+  font-size: var(--fluid-60-90);
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -687,6 +664,7 @@ nav a:hover {
   }
 
   .navbar-item {
+    margin: 0;
     display: flex;
     flex-direction: column;
   }
@@ -711,29 +689,37 @@ nav a:hover {
     background-color: var(--primary);
   }
 
-  .navbar-line {
+  .line-section {
     display: none;
   }
+
+
 
   .mobile-center {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 20vh 20px;
   }
 
   .subheading {
-    margin: 0px 20px;
+    margin: 0;
     text-align: center;
   }
 
   .title-text {
-    margin: 10px 50px;
+    margin: 0;
+    margin-top: 10px;
     text-align: center;
   }
 
   .hero-button {
     margin: 9px 10px;
+  }
+
+  .day-use-subtitle {
+    font-size: 20px;
   }
 
   .explore-section {
