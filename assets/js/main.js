@@ -13,7 +13,7 @@ $(document).ready(function () {
 
       $(".title-text").text("SQUAMISH VALLEY ON THE EDGE");
 
-      $(".explore-section").prepend("<img src='/assets/img/background.png'>");
+      $(".explore-section").prepend("<img width='100%' src='/assets/img/background.png'>");
 
       $(".explore-title").text("DESTINATIONS");
 

@@ -199,7 +199,7 @@ h6 {
   color: var(--white);
 }
 
-.with-icon {
+.navbar-item a {
   display: flex;
   align-items: center;
 }
@@ -277,7 +277,7 @@ nav a:hover {
   margin-bottom: var(--fluid-73-173);
 }
 
-.navbar-line {
+.line-section hr {
   width: 100%;
   height: 1px;
   border: none;
@@ -310,7 +310,7 @@ nav a:hover {
   color: var(--white);
 }
 
-.hero-button {
+.mobile-center button {
   margin-left: var(--fluid-225-528);
   margin-top: var(--fluid-9-20);
   font-family: Heebo-Regular;
@@ -335,17 +335,13 @@ nav a:hover {
 # Camping and Day Use
 --------------------------------------------------------------*/
 
-.day-use {
-  text-align: center;
-}
-
-.day-use-subtitle {
+#day-use-subtitle {
   padding-top: 79px;
   font-family: Heebo-Regular_;
   color: var(--primary);
 }
 
-.day-use-title {
+#day-use-title {
   font-family: Heebo-Regular_;
   padding-top: 8px;
   text-align: center;
@@ -358,6 +354,11 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: var(--fluid-78-110);
+}
+
+.icon-set img {
+  width: 6.125rem;
+  height: 6.125rem;
 }
 
 .day-use-button {
@@ -398,17 +399,17 @@ nav a:hover {
   max-width: 400px;
 }
 
-.explore-subtitle {
+.discover-content span {
   padding-top: 80px;
   color: var(--white);
 }
 
-.explore-title {
+.discover-content h2 {
   padding-top: 11px;
   color: var(--white);
 }
 
-.explore-paragraph {
+.discover-content p {
   padding-top: 21px;
   width: 400;
   font-family: Heebo;
@@ -440,16 +441,16 @@ nav a:hover {
   z-index: 4;
 }
 
-.tours-subtitle {
+.tours-and-tickets ul li span {
   color: var(--white);
 }
 
-.tours-title {
+.tours-and-tickets ul li h2 {
   color: var(--white);
   padding-top: 0.438rem;
 }
 
-.tours-paragraph {
+.tours-and-tickets ul li p {
   color: var(--white);
   font-family: Heebo;
   font-size: 1.125rem;
@@ -476,20 +477,19 @@ nav a:hover {
   padding: 4.188rem 2.814rem 2.75rem 3.75rem;
 }
 
-.find-your-next-subtitle {
+.find-your-next-card span {
   color: var(--primary);
 }
 
-.find-your-next-title {
+.find-your-next-card h2 {
   color: var(--primary);
   padding-top: 0.5rem;
 }
 
-.find-your-next-paragraph {
+.find-your-next-card p {
   color: var(--primary);
   font-family: Heebo;
   font-size: 1.125rem;
-  /* max-width: 28.25rem; */
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -504,16 +504,18 @@ nav a:hover {
 
 .shop-items {
   display: grid;
-  grid-auto-flow: column;
   text-align: center;
-  column-gap: 20px;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  padding: 0;
+  list-style-type: none;
 }
 
-.shop-items-card {
+.shop-items li {
   padding: var(--fluid-50-107) 0px;
 }
 
-.shop-items-title {
+.shop-items h2 {
   color: var(--white);
   font-family: Heebo-Regular;
   font-size: var(--fluid-25-40);
@@ -523,7 +525,7 @@ nav a:hover {
 # Footer Section
 --------------------------------------------------------------*/
 
-.footer {
+#footer {
   background-color: var(--primary);
   margin-top: 20px;
   padding-top: 81px;
@@ -536,7 +538,7 @@ nav a:hover {
   gap: 50px;
 }
 
-.footer-column-title {
+.footer-columns h2 {
   max-width: 85px;
   color: var(--white);
   font-family: Heebo-Regular;
@@ -544,7 +546,7 @@ nav a:hover {
   letter-spacing: 1.08px;
 }
 
-.footer-column-list {
+.footer-columns ul {
   opacity: 0.5;
   list-style-type: none;
   font-family: Inter;
@@ -566,7 +568,7 @@ nav a:hover {
   align-items: center;
 }
 
-.discount-title {
+.footer-discount-section h2 {
   font-family: Heebo-Regular_;
   font-size: 30px;
   font-weight: bold;
@@ -608,7 +610,7 @@ nav a:hover {
   background-color: var(--scarborough-black);
 }
 
-.discount-line {
+.footer-discount-section hr {
   width: 385px;
 }
 
@@ -701,6 +703,10 @@ nav a:hover {
     padding: 20vh 20px;
   }
 
+  .mobile-center button {
+    margin: 9px 10px;
+  }
+
   .subheading {
     margin: 0;
     text-align: center;
@@ -710,10 +716,6 @@ nav a:hover {
     margin: 0;
     margin-top: 10px;
     text-align: center;
-  }
-
-  .hero-button {
-    margin: 9px 10px;
   }
 
   .day-use-subtitle {
@@ -739,11 +741,11 @@ nav a:hover {
     max-width: none;
   }
 
-  .explore-title {
+  .discover-content h2 {
     font-size: 40px;
   }
 
-  .explore-paragraph {
+  .discover-content p {
     font-size: 18px;
     padding: 0 18px;
   }
@@ -754,6 +756,10 @@ nav a:hover {
     align-items: center;
     overflow: hidden;
     margin: 0;
+  }
+
+  #tent-inside-img {
+    display: none;
   }
 
   img.mobile-image {
@@ -768,10 +774,6 @@ nav a:hover {
     max-width: 100%;
     border: none;
     border-bottom: solid 10px #e4cb45;
-  }
-
-  .tent-inside-img {
-    display: none;
   }
 
   .find-your-next {
@@ -792,12 +794,12 @@ nav a:hover {
     display: block;
   }
 
-  .shop-items-card {
+  .shop-items li {
     padding: 100px 0;
     margin-bottom: 30px;
   }
 
-  .footer {
+  #footer {
     padding: 41px 30px 37px;
   }
 
@@ -805,7 +807,7 @@ nav a:hover {
     display: none;
   }
 
-  .discount-title {
+  .footer-discount-section h2 {
     font-size: 18px;
   }
 
@@ -818,7 +820,7 @@ nav a:hover {
     padding: 14px 102px;
   }
 
-  .discount-line {
+  .footer-discount-section hr {
     display: none;
   }
 
@@ -851,5 +853,18 @@ nav a:hover {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+  }
+
+  .panel ul {
+    opacity: 0.5;
+    list-style-type: none;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5rem;
+    letter-spacing: normal;
+    color: var(--white);
   }
 }
